@@ -1,0 +1,315 @@
+:root {
+  --clr-primary-400: hsl(300,100%,25.1%);
+  --clr-primary-500: hsl(300,100%,25.1%);
+  --clr-secondary-200: hsl(30, 38%, 92%);
+
+  --clr-neutral-900: hsl(212, 21%, 14%);
+  --clr-neutral-400: hsl(228, 12%, 48%);
+  --clr-neutral-100: hsl(0, 0%, 100%);
+
+  --ff-accent: "Fraunces", serif;
+  --ff-base: "Montserrat", sans-serif;
+
+  --fw-regular: 500;
+  --fw-bold: 700;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+  height: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.7;
+/*  -webkit-font-smoothing: antialiased;*/
+    background-image:url('data:image/jpeg;base64,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');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+/*  display: block;*/
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+}
+
+/*nav bar*/
+nav{ 
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.menu a{
+    text-decoration: none; 
+    color: black;
+    font-size: 20px;
+    padding: 10px 20px;
+    margin: 0 5px;
+}
+
+.menu a:last-child{
+    background-color: red;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    transform: scale(1.1);
+}
+
+.menu a:hover{
+    background-color: red;
+    border-radius: 10px;
+    transition: 0.25ms linear;
+}
+/* general styling */
+
+body {
+  font-family: var(--ff-base);
+  font-weight: var(--fw-regular);
+  font-size: 0.875rem;
+  color: var(--clr-neutral-400);
+  background-color: var(--clr-secondary-200);
+
+  /* for this project only */
+  display: grid;
+  place-content: center;
+  margin-top: 1rem;
+    
+}
+
+/* utilities */
+
+.flex-group {
+  display: flex;
+  column-gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/* button */
+.button {
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  grid: 0.75rem;
+  justify-content: center;
+  align-items: center;
+
+  border: 0;
+  border-radius: 0.5rem;
+  padding: 0.75em 1.5em;
+  background-color: var(--clr-primary-400);
+  color: var(--clr-neutral-100);
+  font-weight: var(--fw-bold);
+  font-size: 0.925rem;
+}
+
+.button[data-icon="shopping-cart"]::before {
+  content: "";
+  background-image: url("images/icon-cart.svg");
+  width: 15px;
+  height: 16px;
+}
+
+.button:is(:hover, :focus) {
+  background-color: var(--clr-primary-500);
+    box-shadow: 0 30px 40px 50px;
+    transform: scale(1.1);
+}
+
+.Product{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 80px;
+}
+
+/* product styles */
+.product {
+  --content-padding: 1.5rem;
+  --content-spacing: 1rem;
+    margin-right: 30px;
+  display: grid;
+  background-color: var(--clr-neutral-100);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  max-width: 600px;
+    float: left;
+}
+
+@media (min-width: 600px) {
+  .product {
+    --content-padding: 2rem;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.product__content {
+  display: grid;
+  gap: var(--content-spacing);
+  padding: var(--content-padding);
+}
+
+.product__category {
+  font-size: 0.8125rem;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.product__title {
+  font-size: 2rem;
+  font-family: var(--ff-accent);
+  color: var(--clr-neutral-900);
+}
+
+.product__price {
+  font-size: 2rem;
+  font-family: var(--ff-accent);
+  color: var(--clr-primary-400);
+}
+
+
+/*for blue chanel perfume*/
+/* utilities */
+
+.flex-group1 {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+/* button */
+.button1 {
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  grid: 0.75rem;
+  justify-content: center;
+  align-items: center;
+
+  border: 0;
+  border-radius: 0.5rem;
+  padding: 0.75em 1.5em;
+  background-color: midnightblue;
+  color: var(--clr-neutral-100);
+  font-weight: var(--fw-bold);
+  font-size: 0.925rem;
+}
+
+.button1:is(:hover, :focus) {
+  background-color: midnightblue;
+    box-shadow: 0 30px 40px 50px;
+    transform: scale(1.1);
+}
+
+/* product styles */
+.product1 {
+  --content-padding: 1.5rem;
+  --content-spacing: 1rem;
+  margin-left: 30px;  
+  display: grid;
+  background-color: var(--clr-neutral-100);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  max-width: 600px;
+    float: right;
+}
+
+@media (min-width: 600px) {
+  .product1 {
+    --content-padding: 2rem;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.product1__content {
+  display: grid;
+  gap: var(--content-spacing);
+  padding: var(--content-padding);
+}
+
+.product1__category {
+  font-size: 0.8125rem;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.product1__title {
+  font-size: 2rem;
+  font-family: var(--ff-accent);
+  color: var(--clr-neutral-900);
+}
+
+.product1__price {
+  font-size: 2rem;
+  font-family: var(--ff-accent);
+  color: darkblue;
+}
